@@ -30,7 +30,7 @@ Download it here: [https://nodejs.org/](https://nodejs.org/)
     ```bash
     npm run dev
     ```
-    Open [http://localhost:5173](http://localhost:5173) in your browser.
+   
 
 3.  **Build for Production**
     To create a production build:
