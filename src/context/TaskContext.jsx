@@ -8,8 +8,13 @@ export const useTaskContext = () => useContext(TaskContext);
 export const TaskProvider = ({ children }) => {
     // Initialize state from localStorage or mock data
     const [tasks, setTasks] = useState(() => {
-        const savedTasks = localStorage.getItem('tasks');
-        return savedTasks ? JSON.parse(savedTasks) : initialTasks;
+        try {
+            const savedTasks = localStorage.getItem('tasks');
+            return savedTasks ? JSON.parse(savedTasks) : initialTasks;
+        } catch (error) {
+            console.error("Failed to parse tasks from localStorage:", error);
+            return initialTasks;
+        }
     });
 
     const [employeeList] = useState(employees);
