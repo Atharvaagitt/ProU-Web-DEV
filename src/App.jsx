@@ -9,7 +9,7 @@ import Settings from './pages/Settings';
 
 function App() {
     return (
-        <Router>
+        <Router basename="/ProU-Web-DEV">
             <Routes>
                 <Route path="/" element={<MainLayout />}>
                     <Route index element={<Dashboard />} />
